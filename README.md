@@ -81,3 +81,7 @@ Chắc chắn rằng bạn tạo ra 1 file `.env` chứa các env variables như
 ```bash
 cp .env.example .env
 ```
+
+## Danh sách video - commit
+
+Bài 1: [Setup và overview project sẽ build - Vue 3 Realworld Practice Courses ️🔥 TechMely](https://youtu.be/rFmJD8Ho0vQ)
