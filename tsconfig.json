@@ -13,7 +13,7 @@
     "forceConsistentCasingInFileNames": true,
     "verbatimModuleSyntax": true,
     "allowSyntheticDefaultImports": true,
-    "types": ["vite/client", "@testing-library/jest-dom", "node"],
+    "types": ["vite/client", "unplugin-vue-router/client", "@testing-library/jest-dom", "node"],
     "paths": {
       "@/*": ["./src/*"]
     }
