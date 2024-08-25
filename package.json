@@ -19,6 +19,7 @@
     "@unovis/vue": "^1.4.3-beta.0",
     "@vee-validate/zod": "^4.13.2",
     "@vueuse/core": "^11.0.3",
+    "ai": "^3.3.17",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "embla-carousel-vue": "^8.2.0",
