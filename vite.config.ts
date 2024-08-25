@@ -1,18 +1,16 @@
 /// <reference types="vitest" />
 
-import viteVueRouter from 'unplugin-vue-router/vite'
-import viteAutoImport from 'unplugin-auto-import/vite'
-import { VueRouterAutoImports } from 'unplugin-vue-router'
-import viteComponents from 'unplugin-vue-components/vite'
-import viteCssTailwind from 'tailwindcss'
-import viteCssAutoPrefixer from 'autoprefixer'
-import { visualizer as viteVisualizer } from "rollup-plugin-visualizer";
-import viteCompress from "vite-plugin-compression2";
-
-
-import { defineConfig, loadEnv } from 'vite'
 import viteVue from '@vitejs/plugin-vue'
+import viteCssAutoPrefixer from 'autoprefixer'
+import { visualizer as viteVisualizer } from "rollup-plugin-visualizer"
+import viteCssTailwind from 'tailwindcss'
+import viteAutoImport from 'unplugin-auto-import/vite'
+import viteComponents from 'unplugin-vue-components/vite'
+import { VueRouterAutoImports } from 'unplugin-vue-router'
+import viteVueRouter from 'unplugin-vue-router/vite'
 import { fileURLToPath } from 'url'
+import { defineConfig, loadEnv } from 'vite'
+import viteCompress from "vite-plugin-compression2"
 
 export default defineConfig(({ mode }) => {
   const env = loadViteEnv(mode);
