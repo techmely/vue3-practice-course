@@ -1,0 +1,4 @@
+echo "Run linting: ...\n"
+bun run lint
+echo "\nRun Formatting \n"
+bun run format
