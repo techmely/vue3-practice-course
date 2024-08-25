@@ -54,7 +54,7 @@ export default defineConfig(({ mode }) => {
         deleteOriginalAssets: false,
         exclude: [/\.(png|avif|webp|jpe?g|gif)$/i, /\.map$/, /\.br$/],
       }),
-      viteVisualizer({ template: "sunburst" }),
+      viteVisualizer(),
     );
   }
 

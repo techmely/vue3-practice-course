@@ -3,7 +3,7 @@ import {
   ContextMenuSub,
   type ContextMenuSubEmits,
   type ContextMenuSubProps,
-  useForwardPropsEmits,
+  useForwardPropsEmits
 } from 'radix-vue'
 
 const props = defineProps<ContextMenuSubProps>()

@@ -1,9 +1,6 @@
 <script setup lang="ts">
 import { type HTMLAttributes, computed } from 'vue'
-import {
-  AlertDialogDescription,
-  type AlertDialogDescriptionProps,
-} from 'radix-vue'
+import { AlertDialogDescription, type AlertDialogDescriptionProps } from 'radix-vue'
 import { cn } from '@/shared/helpers/className'
 
 const props = defineProps<AlertDialogDescriptionProps & { class?: HTMLAttributes['class'] }>()
@@ -16,7 +13,10 @@ const delegatedProps = computed(() => {
 </script>
 
 <template>
-  <AlertDialogDescription v-bind="delegatedProps" :class="cn('text-sm text-muted-foreground', props.class)">
+  <AlertDialogDescription
+    v-bind="delegatedProps"
+    :class="cn('text-sm text-muted-foreground', props.class)"
+  >
     <slot />
   </AlertDialogDescription>
 </template>

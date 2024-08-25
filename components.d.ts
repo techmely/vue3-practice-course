@@ -228,8 +228,6 @@ declare module 'vue' {
     SheetHeader: typeof import('./src/shared/components/ui/sheet/SheetHeader.vue')['default']
     SheetTitle: typeof import('./src/shared/components/ui/sheet/SheetTitle.vue')['default']
     SheetTrigger: typeof import('./src/shared/components/ui/sheet/SheetTrigger.vue')['default']
-    Sidebar: typeof import('./src/shared/components/Layout/Sidebar.vue')['default']
-    SidebarLinks: typeof import('./src/shared/components/Layout/SidebarLinks.vue')['default']
     Skeleton: typeof import('./src/shared/components/ui/skeleton/Skeleton.vue')['default']
     Slider: typeof import('./src/shared/components/ui/slider/Slider.vue')['default']
     Sonner: typeof import('./src/shared/components/ui/sonner/Sonner.vue')['default']

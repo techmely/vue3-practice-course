@@ -3,13 +3,19 @@ import { computed } from 'vue'
 import { beautifyObjectName } from './utils'
 import type { FieldProps } from './interface'
 import AutoFormLabel from './AutoFormLabel.vue'
-import { FormControl, FormDescription, FormField, FormItem, FormMessage } from '@/shared/components/ui/form'
+import {
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormMessage
+} from '@/shared/components/ui/form'
 import { Switch } from '@/shared/components/ui/switch'
 import { Checkbox } from '@/shared/components/ui/checkbox'
 
 const props = defineProps<FieldProps>()
 
-const booleanComponent = computed(() => props.config?.component === 'switch' ? Switch : Checkbox)
+const booleanComponent = computed(() => (props.config?.component === 'switch' ? Switch : Checkbox))
 </script>
 
 <template>
@@ -18,9 +24,13 @@ const booleanComponent = computed(() => props.config?.component === 'switch' ? S
       <div class="space-y-0 mb-3 flex items-center gap-3">
         <FormControl>
           <slot v-bind="slotProps">
-            <component :is="booleanComponent" v-bind="{ ...slotProps.componentField }" :disabled="disabled"
+            <component
+              :is="booleanComponent"
+              v-bind="{ ...slotProps.componentField }"
+              :disabled="disabled"
               :checked="slotProps.componentField.modelValue"
-              @update:checked="slotProps.componentField['onUpdate:modelValue']" />
+              @update:checked="slotProps.componentField['onUpdate:modelValue']"
+            />
           </slot>
         </FormControl>
         <AutoFormLabel v-if="!config?.hideLabel" :required="required">

@@ -18,7 +18,7 @@ export const INPUT_COMPONENTS = {
   string: AutoFormFieldInput,
   file: AutoFormFieldFile,
   array: AutoFormFieldArray,
-  object: AutoFormFieldObject,
+  object: AutoFormFieldObject
 }
 
 /**
@@ -35,5 +35,5 @@ export const DEFAULT_ZOD_HANDLERS: {
   ZodNativeEnum: 'select',
   ZodNumber: 'number',
   ZodArray: 'array',
-  ZodObject: 'object',
+  ZodObject: 'object'
 }

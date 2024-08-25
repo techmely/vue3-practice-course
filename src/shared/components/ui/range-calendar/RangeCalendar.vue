@@ -1,7 +1,24 @@
 <script lang="ts" setup>
 import { type HTMLAttributes, computed } from 'vue'
-import { RangeCalendarRoot, type RangeCalendarRootEmits, type RangeCalendarRootProps, useForwardPropsEmits } from 'radix-vue'
-import { RangeCalendarCell, RangeCalendarCellTrigger, RangeCalendarGrid, RangeCalendarGridBody, RangeCalendarGridHead, RangeCalendarGridRow, RangeCalendarHeadCell, RangeCalendarHeader, RangeCalendarHeading, RangeCalendarNextButton, RangeCalendarPrevButton } from '.'
+import {
+  RangeCalendarRoot,
+  type RangeCalendarRootEmits,
+  type RangeCalendarRootProps,
+  useForwardPropsEmits
+} from 'radix-vue'
+import {
+  RangeCalendarCell,
+  RangeCalendarCellTrigger,
+  RangeCalendarGrid,
+  RangeCalendarGridBody,
+  RangeCalendarGridHead,
+  RangeCalendarGridRow,
+  RangeCalendarHeadCell,
+  RangeCalendarHeader,
+  RangeCalendarHeading,
+  RangeCalendarNextButton,
+  RangeCalendarPrevButton
+} from '.'
 import { cn } from '@/shared/helpers/className'
 
 const props = defineProps<RangeCalendarRootProps & { class?: HTMLAttributes['class'] }>()
@@ -35,8 +52,16 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
           </RangeCalendarGridRow>
         </RangeCalendarGridHead>
         <RangeCalendarGridBody>
-          <RangeCalendarGridRow v-for="(weekDates, index) in month.rows" :key="`weekDate-${index}`" class="mt-2 w-full">
-            <RangeCalendarCell v-for="weekDate in weekDates" :key="weekDate.toString()" :date="weekDate">
+          <RangeCalendarGridRow
+            v-for="(weekDates, index) in month.rows"
+            :key="`weekDate-${index}`"
+            class="mt-2 w-full"
+          >
+            <RangeCalendarCell
+              v-for="weekDate in weekDates"
+              :key="weekDate.toString()"
+              :date="weekDate"
+            >
               <RangeCalendarCellTrigger :day="weekDate" :month="month.value" />
             </RangeCalendarCell>
           </RangeCalendarGridRow>

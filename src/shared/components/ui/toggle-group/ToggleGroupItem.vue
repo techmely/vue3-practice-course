@@ -7,11 +7,13 @@ import { cn } from '@/shared/helpers/className'
 
 type ToggleGroupVariants = VariantProps<typeof toggleVariants>
 
-const props = defineProps<ToggleGroupItemProps & {
-  class?: HTMLAttributes['class']
-  variant?: ToggleGroupVariants['variant']
-  size?: ToggleGroupVariants['size']
-}>()
+const props = defineProps<
+  ToggleGroupItemProps & {
+    class?: HTMLAttributes['class']
+    variant?: ToggleGroupVariants['variant']
+    size?: ToggleGroupVariants['size']
+  }
+>()
 
 const context = inject<ToggleGroupVariants>('toggleGroup')
 
@@ -24,10 +26,18 @@ const forwardedProps = useForwardProps(delegatedProps)
 </script>
 
 <template>
-  <ToggleGroupItem v-bind="forwardedProps" :class="cn(toggleVariants({
-    variant: context?.variant || variant,
-    size: context?.size || size,
-  }), props.class)">
+  <ToggleGroupItem
+    v-bind="forwardedProps"
+    :class="
+      cn(
+        toggleVariants({
+          variant: context?.variant || variant,
+          size: context?.size || size
+        }),
+        props.class
+      )
+    "
+  >
     <slot />
   </ToggleGroupItem>
 </template>

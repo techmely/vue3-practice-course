@@ -6,7 +6,12 @@ import AutoFormField from './AutoFormField.vue'
 import type { Config, ConfigItem, Shape } from './interface'
 import { beautifyObjectName, getBaseSchema, getBaseType, getDefaultValueInZodStack } from './utils'
 import AutoFormLabel from './AutoFormLabel.vue'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/shared/components/ui/accordion'
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger
+} from '@/shared/components/ui/accordion'
 import { FormItem } from '@/shared/components/ui/form'
 
 const props = defineProps<{
@@ -21,24 +26,22 @@ const shapes = computed(() => {
   // @ts-expect-error ignore {} not assignable to object
   const val: { [key in keyof T]: Shape } = {}
 
-  if (!props.schema)
-    return
+  if (!props.schema) return
   const shape = getBaseSchema(props.schema)?.shape
-  if (!shape)
-    return
+  if (!shape) return
   Object.keys(shape).forEach((name) => {
     const item = shape[name] as ZodAny
     const baseItem = getBaseSchema(item) as ZodAny
-    let options = (baseItem && 'values' in baseItem._def) ? baseItem._def.values as string[] : undefined
-    if (!Array.isArray(options) && typeof options === 'object')
-      options = Object.values(options)
+    let options =
+      baseItem && 'values' in baseItem._def ? (baseItem._def.values as string[]) : undefined
+    if (!Array.isArray(options) && typeof options === 'object') options = Object.values(options)
 
     val[name as keyof T] = {
       type: getBaseType(item),
       default: getDefaultValueInZodStack(item),
       options,
       required: !['ZodOptional', 'ZodNullable'].includes(item._def.typeName),
-      schema: item,
+      schema: item
     }
   })
   return val
@@ -62,8 +65,12 @@ provide(FieldContextKey, fieldContext)
             </AccordionTrigger>
             <AccordionContent class="p-1 space-y-5">
               <template v-for="(shape, key) in shapes" :key="key">
-                <AutoFormField :config="config?.[key as keyof typeof config] as ConfigItem"
-                  :field-name="`${fieldName}.${key.toString()}`" :label="key.toString()" :shape="shape" />
+                <AutoFormField
+                  :config="config?.[key as keyof typeof config] as ConfigItem"
+                  :field-name="`${fieldName}.${key.toString()}`"
+                  :label="key.toString()"
+                  :shape="shape"
+                />
               </template>
             </AccordionContent>
           </AccordionItem>

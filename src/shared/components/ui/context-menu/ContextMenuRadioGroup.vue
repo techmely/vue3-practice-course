@@ -3,7 +3,7 @@ import {
   ContextMenuRadioGroup,
   type ContextMenuRadioGroupEmits,
   type ContextMenuRadioGroupProps,
-  useForwardPropsEmits,
+  useForwardPropsEmits
 } from 'radix-vue'
 
 const props = defineProps<ContextMenuRadioGroupProps>()

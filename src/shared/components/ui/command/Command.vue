@@ -6,7 +6,7 @@ import { cn } from '@/shared/helpers/className'
 
 const props = withDefaults(defineProps<ComboboxRootProps & { class?: HTMLAttributes['class'] }>(), {
   open: true,
-  modelValue: '',
+  modelValue: ''
 })
 
 const emits = defineEmits<ComboboxRootEmits>()
@@ -21,8 +21,15 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
-  <ComboboxRoot v-bind="forwarded"
-    :class="cn('flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground', props.class)">
+  <ComboboxRoot
+    v-bind="forwarded"
+    :class="
+      cn(
+        'flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground',
+        props.class
+      )
+    "
+  >
     <slot />
   </ComboboxRoot>
 </template>

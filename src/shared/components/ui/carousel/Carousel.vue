@@ -4,7 +4,7 @@ import type { CarouselEmits, CarouselProps, WithClassAsProps } from './interface
 import { cn } from '@/shared/helpers/className'
 
 const props = withDefaults(defineProps<CarouselProps & WithClassAsProps>(), {
-  orientation: 'horizontal',
+  orientation: 'horizontal'
 })
 
 const emits = defineEmits<CarouselEmits>()
@@ -32,8 +32,13 @@ function onKeyDown(event: KeyboardEvent) {
 </script>
 
 <template>
-  <div :class="cn('relative', props.class)" role="region" aria-roledescription="carousel" tabindex="0"
-    @keydown="onKeyDown">
+  <div
+    :class="cn('relative', props.class)"
+    role="region"
+    aria-roledescription="carousel"
+    tabindex="0"
+    @keydown="onKeyDown"
+  >
     <slot v-bind="carouselArgs" />
   </div>
 </template>

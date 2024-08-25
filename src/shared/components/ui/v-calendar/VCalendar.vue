@@ -27,23 +27,26 @@ interface SimpleDateParts {
 }
 
 defineOptions({
-  inheritAttrs: false,
+  inheritAttrs: false
 })
-const props = withDefaults(defineProps<{
-  modelValue?: string | number | Date | DatePickerModel
-  modelModifiers?: object
-  columns?: number
-  type?: 'single' | 'range'
-}>(), {
-  type: 'single',
-  columns: 1,
-})
+const props = withDefaults(
+  defineProps<{
+    modelValue?: string | number | Date | DatePickerModel
+    modelModifiers?: object
+    columns?: number
+    type?: 'single' | 'range'
+  }>(),
+  {
+    type: 'single',
+    columns: 1
+  }
+)
 const emits = defineEmits<{
   (e: 'update:modelValue', payload: typeof props.modelValue): void
 }>()
 
 const modelValue = useVModel(props, 'modelValue', emits, {
-  passive: true,
+  passive: true
 })
 
 const datePicker = ref<InstanceType<typeof DatePicker>>()
@@ -51,11 +54,9 @@ const datePicker = ref<InstanceType<typeof DatePicker>>()
 const calendarRef = computed<InstanceType<typeof Calendar>>(() => datePicker.value.calendarRef)
 
 function handleNav(direction: 'prev' | 'next') {
-  if (!calendarRef.value)
-    return
+  if (!calendarRef.value) return
 
-  if (direction === 'prev')
-    calendarRef.value.movePrev()
+  if (direction === 'prev') calendarRef.value.movePrev()
   else calendarRef.value.moveNext()
 }
 
@@ -68,7 +69,7 @@ onMounted(async () => {
 const $slots = useSlots()
 const vCalendarSlots = computed(() => {
   return Object.keys($slots)
-    .filter(name => isVCalendarSlot(name))
+    .filter((name) => isVCalendarSlot(name))
     .reduce((obj: Record<string, any>, key: string) => {
       obj[key] = $slots[key]
       return obj
@@ -78,21 +79,44 @@ const vCalendarSlots = computed(() => {
 
 <template>
   <div class="relative">
-    <div v-if="$attrs.mode !== 'time'" class="absolute flex justify-between w-full px-4 top-3 z-[1]">
+    <div
+      v-if="$attrs.mode !== 'time'"
+      class="absolute flex justify-between w-full px-4 top-3 z-[1]"
+    >
       <button
-        :class="cn(buttonVariants({ variant: 'outline' }), 'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100')"
-        @click="handleNav('prev')">
+        :class="
+          cn(
+            buttonVariants({ variant: 'outline' }),
+            'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100'
+          )
+        "
+        @click="handleNav('prev')"
+      >
         <ChevronLeft class="w-4 h-4" />
       </button>
       <button
-        :class="cn(buttonVariants({ variant: 'outline' }), 'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100')"
-        @click="handleNav('next')">
+        :class="
+          cn(
+            buttonVariants({ variant: 'outline' }),
+            'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100'
+          )
+        "
+        @click="handleNav('next')"
+      >
         <ChevronRight class="w-4 h-4" />
       </button>
     </div>
 
-    <DatePicker ref="datePicker" v-bind="$attrs" v-model="modelValue" :model-modifiers="modelModifiers" class="calendar"
-      trim-weeks :transition="'none'" :columns="columns">
+    <DatePicker
+      ref="datePicker"
+      v-bind="$attrs"
+      v-model="modelValue"
+      :model-modifiers="modelModifiers"
+      class="calendar"
+      trim-weeks
+      :transition="'none'"
+      :columns="columns"
+    >
       <template v-for="(_, slot) of vCalendarSlots" #[slot]="scope">
         <slot :name="slot" v-bind="scope" />
       </template>
@@ -181,7 +205,10 @@ const vCalendarSlots = computed(() => {
   @apply rounded-r-md;
 }
 
-.calendar .vc-day:has(.vc-highlight-bg-outline):not(:has(.vc-highlight-base-start)):not(:has(.vc-highlight-base-end)) {
+.calendar
+  .vc-day:has(.vc-highlight-bg-outline):not(:has(.vc-highlight-base-start)):not(
+    :has(.vc-highlight-base-end)
+  ) {
   @apply rounded-md;
 }
 
@@ -193,7 +220,10 @@ const vCalendarSlots = computed(() => {
   @apply rounded-md;
 }
 
-.calendar .is-not-in-month:not(:has(.vc-highlight-content-solid)):not(:has(.vc-highlight-content-light)):not(:has(.vc-highlight-content-outline)),
+.calendar
+  .is-not-in-month:not(:has(.vc-highlight-content-solid)):not(
+    :has(.vc-highlight-content-light)
+  ):not(:has(.vc-highlight-content-outline)),
 .calendar .vc-disabled {
   @apply text-muted-foreground opacity-50;
 }
@@ -322,7 +352,7 @@ const vCalendarSlots = computed(() => {
   @apply border-t border-solid border-secondary mt-2;
 }
 
-.vc-time-picker>*+* {
+.vc-time-picker > * + * {
   @apply mt-1;
 }
 

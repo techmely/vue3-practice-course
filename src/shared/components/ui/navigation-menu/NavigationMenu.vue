@@ -4,7 +4,7 @@ import {
   NavigationMenuRoot,
   type NavigationMenuRootEmits,
   type NavigationMenuRootProps,
-  useForwardPropsEmits,
+  useForwardPropsEmits
 } from 'radix-vue'
 import NavigationMenuViewport from './NavigationMenuViewport.vue'
 import { cn } from '@/shared/helpers/className'
@@ -23,8 +23,10 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
-  <NavigationMenuRoot v-bind="forwarded"
-    :class="cn('relative z-10 flex max-w-max flex-1 items-center justify-center', props.class)">
+  <NavigationMenuRoot
+    v-bind="forwarded"
+    :class="cn('relative z-10 flex max-w-max flex-1 items-center justify-center', props.class)"
+  >
     <slot />
     <NavigationMenuViewport />
   </NavigationMenuRoot>

@@ -3,12 +3,18 @@ import { computed } from 'vue'
 import AutoFormLabel from './AutoFormLabel.vue'
 import { beautifyObjectName } from './utils'
 import type { FieldProps } from './interface'
-import { FormControl, FormDescription, FormField, FormItem, FormMessage } from '@/shared/components/ui/form'
+import {
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormMessage
+} from '@/shared/components/ui/form'
 import { Input } from '@/shared/components/ui/input'
 import { Textarea } from '@/shared/components/ui/textarea'
 
 const props = defineProps<FieldProps>()
-const inputComponent = computed(() => props.config?.component === 'textarea' ? Textarea : Input)
+const inputComponent = computed(() => (props.config?.component === 'textarea' ? Textarea : Input))
 </script>
 
 <template>
@@ -19,8 +25,12 @@ const inputComponent = computed(() => props.config?.component === 'textarea' ? T
       </AutoFormLabel>
       <FormControl>
         <slot v-bind="slotProps">
-          <component :is="inputComponent" type="text" v-bind="{ ...slotProps.componentField, ...config?.inputProps }"
-            :disabled="disabled" />
+          <component
+            :is="inputComponent"
+            type="text"
+            v-bind="{ ...slotProps.componentField, ...config?.inputProps }"
+            :disabled="disabled"
+          />
         </slot>
       </FormControl>
       <FormDescription v-if="config?.description">

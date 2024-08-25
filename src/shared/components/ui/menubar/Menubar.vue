@@ -4,7 +4,7 @@ import {
   MenubarRoot,
   type MenubarRootEmits,
   type MenubarRootProps,
-  useForwardPropsEmits,
+  useForwardPropsEmits
 } from 'radix-vue'
 import { cn } from '@/shared/helpers/className'
 
@@ -21,11 +21,10 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
-  <MenubarRoot v-bind="forwarded" :class="cn(
-    'flex h-10 items-center gap-x-1 rounded-md border bg-background p-1',
-    props.class,
-  )
-    ">
+  <MenubarRoot
+    v-bind="forwarded"
+    :class="cn('flex h-10 items-center gap-x-1 rounded-md border bg-background p-1', props.class)"
+  >
     <slot />
   </MenubarRoot>
 </template>

@@ -4,7 +4,13 @@ import { CalendarIcon } from 'lucide-vue-next'
 import { beautifyObjectName } from './utils'
 import AutoFormLabel from './AutoFormLabel.vue'
 import type { FieldProps } from './interface'
-import { FormControl, FormDescription, FormField, FormItem, FormMessage } from '@/shared/components/ui/form'
+import {
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormMessage
+} from '@/shared/components/ui/form'
 
 import { Calendar } from '@/shared/components/ui/calendar'
 import { Button } from '@/shared/components/ui/button'
@@ -14,7 +20,7 @@ import { cn } from '@/shared/helpers/className'
 defineProps<FieldProps>()
 
 const df = new DateFormatter('en-US', {
-  dateStyle: 'long',
+  dateStyle: 'long'
 })
 </script>
 
@@ -29,13 +35,21 @@ const df = new DateFormatter('en-US', {
           <div>
             <Popover>
               <PopoverTrigger as-child :disabled="disabled">
-                <Button variant="outline" :class="cn(
-                  'w-full justify-start text-left font-normal',
-                  !slotProps.componentField.modelValue && 'text-muted-foreground',
-                )">
+                <Button
+                  variant="outline"
+                  :class="
+                    cn(
+                      'w-full justify-start text-left font-normal',
+                      !slotProps.componentField.modelValue && 'text-muted-foreground'
+                    )
+                  "
+                >
                   <CalendarIcon class="mr-2 h-4 w-4" :size="16" />
-                  {{ slotProps.componentField.modelValue ?
-                    df.format(slotProps.componentField.modelValue.toDate(getLocalTimeZone())) : "Pick a date" }}
+                  {{
+                    slotProps.componentField.modelValue
+                      ? df.format(slotProps.componentField.modelValue.toDate(getLocalTimeZone()))
+                      : 'Pick a date'
+                  }}
                 </Button>
               </PopoverTrigger>
               <PopoverContent class="w-auto p-0">

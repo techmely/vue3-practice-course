@@ -4,15 +4,20 @@ import { Toggle, type ToggleEmits, type ToggleProps, useForwardPropsEmits } from
 import { type ToggleVariants, toggleVariants } from '.'
 import { cn } from '@/shared/helpers/className'
 
-const props = withDefaults(defineProps<ToggleProps & {
-  class?: HTMLAttributes['class']
-  variant?: ToggleVariants['variant']
-  size?: ToggleVariants['size']
-}>(), {
-  variant: 'default',
-  size: 'default',
-  disabled: false,
-})
+const props = withDefaults(
+  defineProps<
+    ToggleProps & {
+      class?: HTMLAttributes['class']
+      variant?: ToggleVariants['variant']
+      size?: ToggleVariants['size']
+    }
+  >(),
+  {
+    variant: 'default',
+    size: 'default',
+    disabled: false
+  }
+)
 
 const emits = defineEmits<ToggleEmits>()
 
