@@ -1,15 +1,12 @@
 <script setup lang="ts">
-const { authModal } = storeToRefs(useGlobalStore())
+import TopNavbar from '@/modules/account/components/TopNavbar.vue';
+
 </script>
 
 <template>
-  <div class="flex flex-col">
+  <div class="flex flex-col container min-h-screen">
     <TopNavbar />
-
-    <main class="flex flex-col flex-1 gap-4 p-4 lg:gap-6 lg:p-6">
-      <div class="flex items-center">
-        <h1 class="text-lg font-semibold md:text-2xl">{{ authModal.isOpen }}</h1>
-      </div>
+    <main class="flex flex-col flex-1 gap-4 py-4 lg:gap-6 lg:py-6">
       <slot />
     </main>
   </div>
