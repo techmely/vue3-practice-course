@@ -1,4 +1,4 @@
-# Techmely Vue3 Academy - Free youtube
+# Techmely Vue3 Academy - Free Youtube Guide
 
 Cảm ơn [hieuhani](https://github.com/hieuhani) vì project [techgoda](https://github.com/hieuhani/techgoda) & [publiz](https://github.com/hieuhani/publiz) API đã giúp em hoàn thành course này.
 
@@ -6,28 +6,30 @@ Cảm ơn [hieuhani](https://github.com/hieuhani) vì project [techgoda](https:/
 
 - Dựng base project với Vue 3 sử dụng Vite
 - Tích hợp VueDevTools
-- Routing với Vue Router và File Based Routing với unplugin-vue-router
+- Routing với Vue Router và File Based Routing với [unplugin-vue-router](https://github.com/posva/unplugin-vue-router)
 - Vue Component và Composable Design với Composition API
-- State management với Pinia
+- Query/Mutate dữ liệu với [Vue Query](https://tanstack.com/query/latest/docs/framework/vue/overview) + [Ky](https://github.com/sindresorhus/ky)
+- State management với [Pinia](https://pinia.vuejs.org/)
 - Dùng Modern Javascript (ES2023/ESNext)
 - User permissions & Route Guards
-- Data và File Storage, cộng với Authentication với Firebase
-- Tự động code review bằng CodeRabbit AI
+- Data và File Storage, cộng với Authentication với [Firebase](https://firebase.google.com/docs/auth)
+- Tự động code review bằng [CodeRabbit AI](https://coderabbit.ai/)
 - Linting/Formatting với ESLint + Prettier
 - Consuming REST APIs
 - Vận dụng các kiến thức thực tế trong dự án
-- Error handling và monitoring
+- Error handling và monitoring với [Sentry](https://sentry.io/welcome/)
+- Write the unit test with [Vitest](https://vitest.dev/) + [Testing Library](https://testing-library.com/)
 
 ## **Cùng nhau làm các tính năng trong thực tế một cách nhanh chóng:**
 
-- Sử dụng OpenAI với một vài prompts để lấy các thông tin tóm tắt quan trọng của bài viết, bài tìm việc...
-- Sử dụng các component tích hợp sẵn và đẹp mắt với TailwindCSS và ShadCN Vue
+- Sử dụng [OpenAI](https://openai.com/) với một vài prompts để lấy các thông tin tóm tắt quan trọng của bài viết, bài tìm việc...
+- Sử dụng các component tích hợp sẵn và đẹp mắt với TailwindCSS và [ShadCN Vue](https://shadcn-vue.com/)
 - Lọc/Tìm kiếm dữ liệu với danh sách bài viết, bài đăng công việc, tags
-- Forms và Validation với Autoform + Zod
+- Forms và Validation với [Autoform + Zod](https://www.shadcn-vue.com/docs/components/auto-form.html)
 - Tự động lưu bài viết trong quá trình viết nội dung
 - Phân trang và Infinite scroll
 - Real time commenting
-- Analytics và events tracking với Google Analytics 4, Google Tag Manager, và Sentry.
+- Analytics và events tracking với Google Analytics 4, [Google Tag Manager](https://tagmanager.google.com/), và Sentry.
 
 ## **Vuejs API ta sẽ xử dụng**
 
