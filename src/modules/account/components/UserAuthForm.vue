@@ -4,6 +4,11 @@ import { toTypedSchema } from '@vee-validate/zod';
 import { useForm } from 'vee-validate';
 import * as z from 'zod';
 import { useSignUp } from '../composables/useSignUp';
+import { useSignIn } from '../composables/useSignIn';
+
+const props = withDefaults(defineProps<{
+  isSignIn: boolean
+}>(), { isSignIn: false })
 
 const schema = z.object({
   email: z.string().email(),
@@ -14,10 +19,16 @@ const form = useForm({
   validationSchema: toTypedSchema(schema),
 })
 
-const { mutate, isPending } = useSignUp()
+const { mutate: mutateSignUp, isPending: isPendingSignUp } = useSignUp()
+const { mutate: mutateSignIn, isPending: isPendingSignIn } = useSignIn()
+const isLoading = isPendingSignIn || isPendingSignUp
 
 async function onSubmit(value: any) {
-  mutate(value)
+  if (props.isSignIn) {
+    mutateSignIn(value)
+  } else {
+    mutateSignUp(value)
+  }
 }
 </script>
 
@@ -32,7 +43,7 @@ async function onSubmit(value: any) {
           autocapitalize: 'none',
           autocomplete: 'off',
           autocorrect: 'off',
-          disabled: isPending,
+          disabled: isLoading,
         }
       },
       password: {
@@ -44,9 +55,9 @@ async function onSubmit(value: any) {
         },
       },
     }" class="space-y-4" @submit="onSubmit">
-      <Button :disabled="isPending" type="submit" class="w-full">
-        <iconify-icon icon="svg-spinners:blocks-wave" v-if="isPending" class="mr-2 h-4 w-4" />
-        Sign In with Email
+      <Button :disabled="isLoading" type="submit" class="w-full">
+        <iconify-icon icon="svg-spinners:blocks-wave" v-if="isLoading" class="mr-2 h-4 w-4" />
+        {{ isSignIn ? 'Sign In' : 'Sign Up' }} with Email
       </Button>
     </AutoForm>
     <div class="relative">

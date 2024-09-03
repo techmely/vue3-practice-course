@@ -3,11 +3,11 @@ import UserAuthForm from './UserAuthForm.vue';
 </script>
 
 <template>
-  <div data-testid="block-account-actions">
+  <div data-testid="block-account-actions" class="space-x-4">
     <Dialog>
       <DialogTrigger as-child>
-        <Button>
-          Login
+        <Button variant="outline">
+          Sign Up
         </Button>
       </DialogTrigger>
       <DialogContent class="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[450px]">
@@ -33,6 +33,20 @@ import UserAuthForm from './UserAuthForm.vue';
         </p>
       </DialogContent>
     </Dialog>
-
+    <Dialog>
+      <DialogTrigger as-child>
+        <Button>
+          Sign In
+        </Button>
+      </DialogTrigger>
+      <DialogContent class="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[450px]">
+        <DialogHeader>
+          <DialogTitle class="text-2xl font-semibold tracking-tight">
+            Sign In
+          </DialogTitle>
+        </DialogHeader>
+        <UserAuthForm :is-sign-in="true" />
+      </DialogContent>
+    </Dialog>
   </div>
 </template>

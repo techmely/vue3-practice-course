@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import { useSignOut } from '../composables/useSignOut';
 const signout = useSignOut()
+const router = useRouter()
+
+const handleSignOut = async () => {
+  await signout.mutateAsync()
+  router.replace('/')
+}
 
 </script>
 
@@ -13,14 +19,14 @@ const signout = useSignOut()
       </Avatar>
     </DropdownMenuTrigger>
     <DropdownMenuContent>
-      <DropdownMenuItem class="">
+      <DropdownMenuItem @click="router.push('/me')" class="cursor-pointer">
         <iconify-icon icon="material-symbols:account-circle-full" class="size-4" /> My Profile
       </DropdownMenuItem>
       <DropdownMenuItem>
         <iconify-icon icon="ooui:articles-ltr" class="size-4" />My Posts
       </DropdownMenuItem>
       <DropdownMenuSeparator />
-      <DropdownMenuItem @click="signout.mutateAsync()">
+      <DropdownMenuItem @click="handleSignOut">
         <iconify-icon icon="octicon:sign-out-24" class="size-4" />Sign Out
       </DropdownMenuItem>
     </DropdownMenuContent>

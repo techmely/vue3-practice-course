@@ -36,7 +36,7 @@ export default defineConfig(({ mode }) => {
       ],
       dts: true,
       viteOptimizeDeps: true,
-      dirs: ['src/modules/account/store', 'src/modules/global/store']
+      dirs: ['src/modules/account/store', 'src/modules/global/store', 'src/modules/user/store']
     }),
     viteVue({
       template: {
