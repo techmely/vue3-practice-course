@@ -1,8 +1,8 @@
-import { appFirebaseAuth, getUserFromFirebaseUser } from '@/libs/firebase/auth'
 import { onAuthStateChanged } from 'firebase/auth'
+import { appFirebaseAuth, getUserFromFirebaseUser } from '../services/firebase.service'
 
 export function useObserveAppUser() {
-  const { updateUser } = useAccountStore()
+  const { updateUser } = useUserStore()
 
   onAuthStateChanged(appFirebaseAuth, (user) => {
     if (user) {

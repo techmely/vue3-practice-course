@@ -1,9 +1,9 @@
-import { signUpEmailPassword } from '@/libs/firebase/auth'
 import { useMutation } from '@tanstack/vue-query'
 import type { SignUpRequest } from '../account.types'
+import { signUpEmailPassword } from '../services/firebase.service'
 
 export function useSignUp() {
-  const accountStore = useAccountStore()
+  const accountStore = useUserStore()
   const globalStore = useGlobalStore()
 
   const mutation = useMutation({

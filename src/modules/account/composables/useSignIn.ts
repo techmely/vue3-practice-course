@@ -1,9 +1,9 @@
-import { signInEmailPassword } from '@/libs/firebase/auth'
 import { useMutation } from '@tanstack/vue-query'
 import type { SignInRequest } from '../account.types'
+import { signInEmailPassword } from '../services/firebase.service'
 
 export function useSignIn() {
-  const accountStore = useAccountStore()
+  const accountStore = useUserStore()
   const globalStore = useGlobalStore()
 
   const mutation = useMutation({

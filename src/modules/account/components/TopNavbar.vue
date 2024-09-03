@@ -3,7 +3,7 @@ import { navigationMenuTriggerStyle } from '@/shared/components/ui/navigation-me
 import UserAuthDialog from './UserAuthDialog.vue';
 import UserDropdownActions from './UserDropdownActions.vue';
 
-const { user } = storeToRefs(useAccountStore())
+const { user } = storeToRefs(useUserStore())
 
 </script>
 

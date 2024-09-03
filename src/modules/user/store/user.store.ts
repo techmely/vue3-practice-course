@@ -1,6 +1,6 @@
-import type { AppUser } from '../account.types'
+import type { AppUser } from '../user.types'
 
-export const useAccountStore = defineStore('account-store', () => {
+export const useUserStore = defineStore('user-store', () => {
   const user = ref<AppUser | undefined>()
 
   function updateUser(newUser: AppUser | undefined) {
@@ -14,5 +14,5 @@ export const useAccountStore = defineStore('account-store', () => {
 })
 
 if (import.meta.hot) {
-  import.meta.hot.accept(acceptHMRUpdate(useAccountStore, import.meta.hot))
+  import.meta.hot.accept(acceptHMRUpdate(useUserStore, import.meta.hot))
 }
