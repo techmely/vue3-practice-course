@@ -273,7 +273,6 @@ declare module 'vue' {
     TooltipContent: typeof import('./src/shared/components/ui/tooltip/TooltipContent.vue')['default']
     TooltipProvider: typeof import('./src/shared/components/ui/tooltip/TooltipProvider.vue')['default']
     TooltipTrigger: typeof import('./src/shared/components/ui/tooltip/TooltipTrigger.vue')['default']
-    TopNavbar: typeof import('./src/modules/account/components/TopNavbar.vue')['default']
     VCalendar: typeof import('./src/shared/components/ui/v-calendar/VCalendar.vue')['default']
   }
 }
