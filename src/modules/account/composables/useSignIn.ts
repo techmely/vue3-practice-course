@@ -3,13 +3,13 @@ import type { SignInRequest } from '../account.types'
 import { signInEmailPassword } from '../services/firebase.service'
 
 export function useSignIn() {
-  const accountStore = useUserStore()
+  const userStore = useUserStore()
   const globalStore = useGlobalStore()
 
   const mutation = useMutation({
     mutationFn: (request: SignInRequest) => signInEmailPassword(request),
     onSuccess(data) {
-      accountStore.updateUser(data)
+      userStore.updateUser(data)
       globalStore.toggleAuthModal(false)
     }
   })
