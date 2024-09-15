@@ -1,5 +1,5 @@
-import { appEnv } from '@/shared/helpers/enviroment'
-import appConfig from 'app.config'
+import { appEnv } from '@/shared/helpers/environment'
+import appConfig from '../../../app.config'
 import ky from 'ky'
 
 const headers = {
