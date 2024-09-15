@@ -6,6 +6,15 @@ const router = createRouter({
   routes
 })
 
+// router.beforeEach((to, from, next) => {
+//   const { user } = useUserStore()
+//   if (!user) {
+//     next({ path: '/login' })
+//   } else {
+//     next()
+//   }
+// })
+
 if (import.meta.hot) {
   handleHotUpdate(router)
 }
