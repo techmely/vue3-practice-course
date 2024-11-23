@@ -14,3 +14,11 @@
 - Create API services
 - Create composable to fetch data
 - Integrate to home page
+
+## Eps 4
+
+- Update dependencies version
+- Update new config of
+  - vscode
+  - linting
+  - Cập nhật về testing

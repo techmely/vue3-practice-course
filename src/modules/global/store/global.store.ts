@@ -6,7 +6,7 @@ export const useGlobalStore = defineStore('global-store', () => {
   }
   return {
     isOpenAuthModal,
-    toggleAuthModal,
+    toggleAuthModal
   }
 })
 

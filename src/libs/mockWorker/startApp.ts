@@ -5,7 +5,7 @@ export async function startMockWorker(app: App) {
   if (appEnv.isDev && appEnv.isMock) {
     const { mockWorker } = await import('./index')
     await mockWorker.start({
-      onUnhandledRequest: 'bypass',
+      onUnhandledRequest: 'bypass'
     })
     app.mount('#app')
   } else {

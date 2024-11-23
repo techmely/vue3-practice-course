@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { navigationMenuTriggerStyle } from '@/shared/components/ui/navigation-menu';
-import UserAuthDialog from './UserAuthDialog.vue';
-import UserDropdownActions from './UserDropdownActions.vue';
+import { navigationMenuTriggerStyle } from '@/shared/components/ui/navigation-menu'
+import UserAuthDialog from './UserAuthDialog.vue'
+import UserDropdownActions from './UserDropdownActions.vue'
 
 const { user } = storeToRefs(useUserStore())
-
 </script>
 
 <template>
@@ -12,7 +11,10 @@ const { user } = storeToRefs(useUserStore())
     <div class="flex items-center">
       <a href="/">
         <Avatar>
-          <AvatarImage src="https://avatars.githubusercontent.com/u/80998640?s=200&v=4" alt="@techmely" />
+          <AvatarImage
+            src="https://avatars.githubusercontent.com/u/80998640?s=200&v=4"
+            alt="@techmely"
+          />
           <AvatarFallback>Techmely</AvatarFallback>
         </Avatar>
       </a>

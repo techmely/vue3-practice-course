@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useSignOut } from '../composables/useSignOut';
+import { useSignOut } from '../composables/useSignOut'
 const signout = useSignOut()
 const router = useRouter()
 
@@ -7,7 +7,6 @@ const handleSignOut = async () => {
   await signout.mutateAsync()
   router.replace('/')
 }
-
 </script>
 
 <template>
