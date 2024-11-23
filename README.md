@@ -4,12 +4,14 @@ Cảm ơn [hieuhani](https://github.com/hieuhani) vì project [techgoda](https:/
 
 ## Danh sách video
 
-- Bài 1: [Setup và overview project sẽ build - Vue 3 Realworld Practice Courses ️🔥 TechMely](https://www.youtube.com/watch?v=rFmJD8Ho0vQ&list=PLwJIrGynFq9BwVv-zl8OUVekY-7mcABww&index=4)
-- Bài 2: [Setup Firebase Authentication & Tanstack Vue Query ️- Vue 3 Realworld Practice Ep 02 🔥 TechMely](https://www.youtube.com/watch?v=IrBSx2qr9nA&list=PLwJIrGynFq9BwVv-zl8OUVekY-7mcABww&index=2)
-- Bài 3: [Dựng UI Home Page = v0 AI, mock API với Service Worker Ep 03 - Vue 3 Realworld Practice 🔥 TechMely](https://www.youtube.com/watch?v=AYQCb1yFzd8&list=PLwJIrGynFq9BwVv-zl8OUVekY-7mcABww&index=1)
-- Bài 4: Member Only [Cập nhật dependencies version, linting, và testing]()
-- Bài 5: Member Only [Handle Error Global + Capture analytics events](https://www.youtube.com/watch?v=Vg9n_YRGPIY&list=PLwJIrGynFq9B_BQJZJi-ikWDDkYKVUpM5)
-- Bài 5: Member Only [Updating...](https://www.youtube.com/watch?v=Vg9n_YRGPIY&list=PLwJIrGynFq9B_BQJZJi-ikWDDkYKVUpM5)
+- Bài 1: [Setup và overview project sẽ build](https://www.youtube.com/watch?v=rFmJD8Ho0vQ&list=PLwJIrGynFq9BwVv-zl8OUVekY-7mcABww&index=4)
+- Bài 2: [Setup Firebase Authentication & Tanstack Vue Query ️](https://www.youtube.com/watch?v=IrBSx2qr9nA&list=PLwJIrGynFq9BwVv-zl8OUVekY-7mcABww&index=2)
+- Bài 3: [Dựng UI Home Page = v0 AI, mock API với Service Worker](https://www.youtube.com/watch?v=AYQCb1yFzd8&list=PLwJIrGynFq9BwVv-zl8OUVekY-7mcABww&index=1)
+- Bài 4: [Cập nhật dependencies version, linting, và testing]
+- Bài 5: Member Only [Handle Error Global + Capture analytics events]
+- Bài 6: Member Only [Tạo/Viết/Sửa/Xóa bài viết với Tiptap, Mock Service Worker và FakerJs]
+- Bài 7: Member Only [Search + tóm tắt bài viết với Vue Query và OpenAI]
+- Bài 8: Member Only [Deploy project với Vercel và Cloudflare]
 
 ## **We cover the fundamentals, like:**
 
@@ -37,8 +39,6 @@ Cảm ơn [hieuhani](https://github.com/hieuhani) vì project [techgoda](https:/
 - Lọc/Tìm kiếm dữ liệu với danh sách bài viết, bài đăng công việc, tags
 - [x] Forms và Validation với [Autoform + Zod](https://www.shadcn-vue.com/docs/components/auto-form.html)
 - Tự động lưu bài viết trong quá trình viết nội dung
-- Phân trang và Infinite scroll
-- Real time commenting
 - Analytics và events tracking với Google Analytics 4, [Google Tag Manager](https://tagmanager.google.com/), và [Sentry](https://sentry.io/welcome) tracking error.
 
 ## **VueJs API ta sẽ xử dụng**
