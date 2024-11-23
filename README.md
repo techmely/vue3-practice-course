@@ -7,7 +7,7 @@ Cảm ơn [hieuhani](https://github.com/hieuhani) vì project [techgoda](https:/
 - Bài 1: [Setup và overview project sẽ build](https://www.youtube.com/watch?v=rFmJD8Ho0vQ&list=PLwJIrGynFq9BwVv-zl8OUVekY-7mcABww&index=4)
 - Bài 2: [Setup Firebase Authentication & Tanstack Vue Query ️](https://www.youtube.com/watch?v=IrBSx2qr9nA&list=PLwJIrGynFq9BwVv-zl8OUVekY-7mcABww&index=2)
 - Bài 3: [Dựng UI Home Page = v0 AI, mock API với Service Worker](https://www.youtube.com/watch?v=AYQCb1yFzd8&list=PLwJIrGynFq9BwVv-zl8OUVekY-7mcABww&index=1)
-- Bài 4: [Cập nhật dependencies version, linting, và một số cập nhật về testing]
+- Bài 4: [Cập nhật dependencies version, linting, và sử dụng AI để viết unit test]
 - Bài 5: Member Only [Handle Error Global + Capture analytics events]
 - Bài 6: Member Only [Tạo/Viết/Sửa/Xóa bài viết với Tiptap, Mock Service Worker và FakerJs]
 - Bài 7: Member Only [Search + tóm tắt bài viết với Vue Query và OpenAI]
@@ -28,28 +28,28 @@ Cảm ơn [hieuhani](https://github.com/hieuhani) vì project [techgoda](https:/
 - [x] Linting/Formatting với ESLint + Prettier
 - [x] Consuming REST APIs
 - [x] Vận dụng các kiến thức thực tế trong dự án
-- Error handling và monitoring với [Sentry](https://sentry.io/welcome/)
-- Write the unit test with [Vitest](https://vitest.dev/) + [Testing Library](https://testing-library.com/)
-- Write e2e test with [Playwright](https://playwright.dev/)
+- [ ] Error handling và monitoring với [Sentry](https://sentry.io/welcome/)
+- [ ] Write the unit test with [Vitest](https://vitest.dev/) + [Testing Library](https://testing-library.com/)
+- [ ] Write e2e test with [Playwright](https://playwright.dev/)
 
 ## **Cùng nhau làm các tính năng trong thực tế một cách nhanh chóng:**
 
 - Sử dụng [OpenAI](https://openai.com/) với một vài prompts để lấy các thông tin tóm tắt quan trọng của bài viết, bài tìm việc...
 - [x] Sử dụng các component tích hợp sẵn và đẹp mắt với TailwindCSS và [ShadCN Vue](https://shadcn-vue.com/)
-- Lọc/Tìm kiếm dữ liệu với danh sách bài viết, bài đăng công việc, tags
+- [ ] Lọc/Tìm kiếm dữ liệu với danh sách bài viết, bài đăng công việc, tags
 - [x] Forms và Validation với [Autoform + Zod](https://www.shadcn-vue.com/docs/components/auto-form.html)
-- Tự động lưu bài viết trong quá trình viết nội dung
-- Analytics và events tracking với Google Analytics 4, [Google Tag Manager](https://tagmanager.google.com/), và [Sentry](https://sentry.io/welcome) tracking error.
+- [ ] Tự động lưu bài viết trong quá trình viết nội dung
+- [ ] Analytics và events tracking với Google Analytics 4, [Google Tag Manager](https://tagmanager.google.com/), và [Sentry](https://sentry.io/welcome) tracking error.
 
 ## **VueJs API ta sẽ xử dụng**
 
 ### **Global & General API**
 
-- [app.directive](https://vuejs.org/api/application.html#app-directive)
-- [app.provide](https://vuejs.org/api/application.html#app-provide)
-- [app.config.errorHandler](https://vuejs.org/api/application.html#app-config-errorhandler)
-- [app.config.performance](https://vuejs.org/api/application.html#app-config-performance)
-- [nexttick](https://vuejs.org/api/general.html#nexttick)
+- [ ] [app.directive](https://vuejs.org/api/application.html#app-directive)
+- [ ] [app.provide](https://vuejs.org/api/application.html#app-provide)
+- [ ] [app.config.errorHandler](https://vuejs.org/api/application.html#app-config-errorhandler)
+- [ ] [app.config.performance](https://vuejs.org/api/application.html#app-config-performance)
+- [x] [nexttick](https://vuejs.org/api/general.html#nexttick)
 - [x] [defineComponent](https://vuejs.org/api/general.html#definecomponent)
 - [x] [defineProps & defineEmits](https://vuejs.org/api/sfc-script-setup.html#defineprops-defineemits)
 - [defineExpose](https://vuejs.org/api/general.html#defineexpose)
@@ -59,11 +59,11 @@ Cảm ơn [hieuhani](https://github.com/hieuhani) vì project [techgoda](https:/
 - [x] [ref](https://vuejs.org/api/reactivity-core.html#ref)
 - [x] [reactive](https://vuejs.org/api/reactivity-core.html#reactive)
 - [x] [computed](https://vuejs.org/api/reactivity-core.html#computed)
-- [watchEffect](https://vuejs.org/api/reactivity-core.html#watcheffect)
-- [watch](https://vuejs.org/api/reactivity-core.html#watch)
-- [effectScope](https://vuejs.org/api/reactivity-advanced.html#effectscope)
+- [ ] [watchEffect](https://vuejs.org/api/reactivity-core.html#watcheffect)
+- [ ] [watch](https://vuejs.org/api/reactivity-core.html#watch)
+- [ ] [effectScope](https://vuejs.org/api/reactivity-advanced.html#effectscope)
 - [x] [Lifecycle Hooks](https://vuejs.org/api/composition-api-lifecycle.html)
-- [Dependency Injection](https://vuejs.org/api/composition-api-dependency-injection.html)
+- [ ] [Dependency Injection](https://vuejs.org/api/composition-api-dependency-injection.html)
 
 Khi hoàn thành khoá học Vue3 của Techmely, bạn sẽ có khẳ năng tìm được công việc với VueJs ngoài thực tế bởi những kiến thức, kỹ năng được chia sẻ trong khoá học.
 
