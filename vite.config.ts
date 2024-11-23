@@ -11,6 +11,8 @@ import viteVueRouter from 'unplugin-vue-router/vite'
 import { fileURLToPath } from 'node:url'
 import { defineConfig, loadEnv } from 'vite'
 import viteCompress from 'vite-plugin-compression2'
+import vueDevTools from 'vite-plugin-vue-devtools'
+
 
 export default defineConfig(({ mode }) => {
   const env = loadViteEnv(mode)
@@ -44,7 +46,8 @@ export default defineConfig(({ mode }) => {
           isCustomElement: (element) => element.startsWith('iconify-icon')
         }
       }
-    })
+    }),
+    vueDevTools()
   ]
 
   if (isProd) {
@@ -70,8 +73,11 @@ export default defineConfig(({ mode }) => {
     },
     test: {
       environment: 'jsdom',
-      exclude: ['./__test__/benchmark/**/*'],
-      setupFiles: ['./vitest.setup.ts']
+      exclude: ['./__test__/benchmark/**/*', 'node_modules'],
+      setupFiles: ['./vitest.setup.ts'],
+      coverage: {
+        reporter: ['text', 'html', 'json']
+      }
     },
     server: {
       port: +(process.env.PORT || '') || 3000

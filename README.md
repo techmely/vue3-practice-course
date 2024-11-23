@@ -7,7 +7,7 @@ Cảm ơn [hieuhani](https://github.com/hieuhani) vì project [techgoda](https:/
 - Bài 1: [Setup và overview project sẽ build](https://www.youtube.com/watch?v=rFmJD8Ho0vQ&list=PLwJIrGynFq9BwVv-zl8OUVekY-7mcABww&index=4)
 - Bài 2: [Setup Firebase Authentication & Tanstack Vue Query ️](https://www.youtube.com/watch?v=IrBSx2qr9nA&list=PLwJIrGynFq9BwVv-zl8OUVekY-7mcABww&index=2)
 - Bài 3: [Dựng UI Home Page = v0 AI, mock API với Service Worker](https://www.youtube.com/watch?v=AYQCb1yFzd8&list=PLwJIrGynFq9BwVv-zl8OUVekY-7mcABww&index=1)
-- Bài 4: [Cập nhật dependencies version, linting, và testing]
+- Bài 4: [Cập nhật dependencies version, linting, và một số cập nhật về testing]
 - Bài 5: Member Only [Handle Error Global + Capture analytics events]
 - Bài 6: Member Only [Tạo/Viết/Sửa/Xóa bài viết với Tiptap, Mock Service Worker và FakerJs]
 - Bài 7: Member Only [Search + tóm tắt bài viết với Vue Query và OpenAI]

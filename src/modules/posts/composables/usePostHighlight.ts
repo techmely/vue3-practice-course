@@ -1,5 +1,5 @@
-import { useQuery } from "@tanstack/vue-query";
-import { getPostHighlight } from "../services/post.service";
+import { useQuery } from '@tanstack/vue-query'
+import { getPostHighlight } from '../services/post.service'
 
 export function usePostHighlight() {
   const query = useQuery({

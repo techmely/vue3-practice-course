@@ -7,7 +7,7 @@ const postHandlers = [
   ...postHighlightHandler,
   ...postRecentHandler,
   ...postTopHandler,
-  ...postTrendingHandler,
+  ...postTrendingHandler
 ]
 
 export default postHandlers
