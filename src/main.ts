@@ -23,3 +23,5 @@ app.use(router)
 useObserveAppUser()
 
 startMockWorker(app)
+
+app.config.performance = true
