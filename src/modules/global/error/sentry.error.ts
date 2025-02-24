@@ -1,12 +1,12 @@
 import * as Sentry from "@sentry/vue";
 import type { App } from "vue";
 import type { Router } from "vue-router";
+import type { ErrorSentryOptions } from "./error.types";
 
 
-export const defineSentryErrorHandler = (app: App, router: Router, config: Partial<Sentry.BrowserOptions>) => {
+export const defineSentryErrorHandler = (app: App, router: Router, config: ErrorSentryOptions) => {
   Sentry.init({
     app,
-    dsn: config.dsn,
     integrations: [
       Sentry.browserTracingIntegration({ router }),
       Sentry.replayIntegration(),

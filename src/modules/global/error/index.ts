@@ -4,8 +4,9 @@ import type { Router } from "vue-router";
 import { defineCustomErrorHandler } from "./custom.error";
 import { defineBasicErrorHandler } from "./none.error";
 import { appEnv } from "@/shared/helpers/environment";
+import type { ErrorTrackingConfig } from "./error.types";
 
-const errorTrackingConfig = {
+const errorTrackingConfig: ErrorTrackingConfig = {
   provider: appEnv.VITE_ERROR_TRACKING_PROVIDER,
   sentryOptions: {
     dsn: appEnv.VITE_SENTRY_DSN
@@ -18,9 +19,11 @@ const errorTrackingConfig = {
 export function createGlobalHandleError(app: App, router: Router) {
   switch (errorTrackingConfig.provider) {
     case 'sentry':
+      if (!errorTrackingConfig.sentryOptions) throw new Error('Sentry options are required');
       defineSentryErrorHandler(app, router, errorTrackingConfig.sentryOptions);
       break;
     case 'custom':
+      if (!errorTrackingConfig.customOptions) throw new Error('Custom options are required');
       defineCustomErrorHandler(app, errorTrackingConfig.customOptions);
       break;
     case 'none':

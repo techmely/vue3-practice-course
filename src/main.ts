@@ -13,7 +13,6 @@ import { startMockWorker } from './libs/mockWorker/startApp'
 import { createGlobalHandleError } from './modules/global/error'
 
 const app = createApp(App)
-
 createGlobalHandleError(app, router)
 
 app.use(VueQueryPlugin, {

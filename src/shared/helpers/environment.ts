@@ -9,7 +9,7 @@ const envSchema = z.object({
   VITE_MOCK_ENABLE: z.string(),
   VITE_E2E_ENABLE: z.string(),
 
-  VITE_ERROR_TRACKING_PROVIDER: z.string(),
+  VITE_ERROR_TRACKING_PROVIDER: z.enum(['sentry', 'custom', 'none']),
   VITE_CUSTOM_DSN: z.string(),
   VITE_SENTRY_DSN: z.string(),
 })

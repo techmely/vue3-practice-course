@@ -1,6 +1,7 @@
 import type { App } from "vue";
+import type { ErrorCustomOptions } from "./error.types";
 
-const sendErrorToCustomService = async (url: string, error: unknown) => {
+const sendErrorToCustomService = async (dnsUrl: string, error: unknown) => {
   try {
     let errorMessage: string;
     let errorStack: string | undefined;
@@ -11,7 +12,7 @@ const sendErrorToCustomService = async (url: string, error: unknown) => {
       errorMessage = String(error);
       errorStack = undefined;
     }
-    const response = await fetch(url, {
+    const response = await fetch(dnsUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message: errorMessage, stack: errorStack }),
@@ -24,12 +25,12 @@ const sendErrorToCustomService = async (url: string, error: unknown) => {
   }
 };
 
-export const defineCustomErrorHandler = (app: App, config: any) => {
-  const { url } = config;
+export const defineCustomErrorHandler = (app: App, config: ErrorCustomOptions) => {
+  const { dsn } = config;
 
   app.config.errorHandler = (err, vm, info) => {
     try {
-      sendErrorToCustomService(url, err);
+      sendErrorToCustomService(dsn, err);
     } catch (error) {
       console.error('Error in error handler:', error);
     }
@@ -37,7 +38,7 @@ export const defineCustomErrorHandler = (app: App, config: any) => {
 
   window.onerror = (message, source, line, column, error) => {
     try {
-      sendErrorToCustomService(url, error);
+      sendErrorToCustomService(dsn, error);
     } catch (error) {
       console.error('Error in error handler:', error);
     }
@@ -45,7 +46,7 @@ export const defineCustomErrorHandler = (app: App, config: any) => {
 
   window.onunhandledrejection = (event) => {
     try {
-      sendErrorToCustomService(url, event.reason);
+      sendErrorToCustomService(dsn, event.reason);
     } catch (error) {
       console.error('Error in error handler:', error);
     }
