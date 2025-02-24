@@ -1,5 +1,0 @@
-#!/bin/bash
-
-echo "Run unit test: ..."
-# bun test:unit
-echo "Pass all tests"

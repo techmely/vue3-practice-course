@@ -10,8 +10,10 @@ import { useObserveAppUser } from './modules/account/composables/useObserveAppUs
 import router from './router'
 import { appEnv } from './shared/helpers/environment'
 import { startMockWorker } from './libs/mockWorker/startApp'
+import { createGlobalHandleError } from './modules/global/error'
 
 const app = createApp(App)
+createGlobalHandleError(app, router)
 
 app.use(VueQueryPlugin, {
   enableDevtoolsV6Plugin: appEnv.isDev

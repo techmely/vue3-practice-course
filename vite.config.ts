@@ -9,7 +9,7 @@ import viteComponents from 'unplugin-vue-components/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import viteVueRouter from 'unplugin-vue-router/vite'
 import { fileURLToPath } from 'node:url'
-import { defineConfig, loadEnv } from 'vite'
+import { defineConfig, loadEnv, type UserConfig } from 'vite'
 import viteCompress from 'vite-plugin-compression2'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
@@ -61,7 +61,7 @@ export default defineConfig(({ mode }) => {
     )
   }
 
-  return {
+  const userConfig: UserConfig = {
     define: {
       'process.env': JSON.stringify(env)
     },
@@ -91,6 +91,8 @@ export default defineConfig(({ mode }) => {
       }
     }
   }
+
+  return userConfig
 })
 
 function loadViteEnv(mode: string) {
