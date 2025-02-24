@@ -2,5 +2,3 @@
 
 echo "Run linting: ...\n"
 bun lint
-echo "\nRun Formatting \n"
-bun format
