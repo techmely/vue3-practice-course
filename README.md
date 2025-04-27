@@ -10,10 +10,11 @@ Cảm ơn [hieuhani](https://github.com/hieuhani) vì project [techgoda](https:/
 - Bài 4: [Cập nhật dependencies version, linting, và sử dụng AI để viết unit test](https://www.youtube.com/watch?v=KNyS1vwESxo&list=PLwJIrGynFq9BwVv-zl8OUVekY-7mcABww&index=5)
 - Bài 5: [Trace App Performance Với Chrome Dev Tools | Tối Ưu Hóa Hiệu Suất Ứng Dụng](https://www.youtube.com/watch?v=5o0RfTiS-Ao)
 - Bài 6: [Xử lý global error](https://youtu.be/wXT9shR0AdQ)
-- Bài 7: Member Only [Capture analytics events để đo lường tương tác của user]
-- Bài 8: Member Only [Tạo/Viết/Sửa/Xóa bài viết với Tiptap, Mock Service Worker và FakerJs]
-- Bài 9: Member Only [Search + tóm tắt bài viết với Vue Query và OpenAI]
-- Bài 10: Member Only [Deploy project với Vercel và Cloudflare]
+- Bài 7: [Nâng cấp version dependencies để vá lỗi khi dependencies bị hacker tấn công]
+- Bài 8: Member Only [Capture analytics events để đo lường tương tác của user]
+- Bài 9: Member Only [Tạo/Viết/Sửa/Xóa bài viết với Tiptap, Mock Service Worker và FakerJs]
+- Bài 10: Member Only [Search + tóm tắt bài viết với Vue Query và OpenAI]
+- Bài 11: Member Only [Deploy project với Vercel và Cloudflare]
 
 ## **We cover the fundamentals, like:**
 
