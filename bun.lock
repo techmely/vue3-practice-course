@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "@techmely/vue3-2024-project",
+      "name": "@techmely/vue3-2025-project",
       "dependencies": {
         "@playwright/test": "^1.52.0",
         "@sentry/vue": "^9.14.0",
