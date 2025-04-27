@@ -1,16 +1,16 @@
-import 'iconify-icon'
-import './assets/index.css'
-
 import { VueQueryPlugin } from '@tanstack/vue-query'
 import { createPinia } from 'pinia'
-import { createApp } from 'vue'
 
+import { createApp } from 'vue'
 import App from './App.vue'
+import { startMockWorker } from './libs/mockWorker/startApp'
+
 import { useObserveAppUser } from './modules/account/composables/useObserveAppUser'
+import { createGlobalHandleError } from './modules/global/error'
 import router from './router'
 import { appEnv } from './shared/helpers/environment'
-import { startMockWorker } from './libs/mockWorker/startApp'
-import { createGlobalHandleError } from './modules/global/error'
+import 'iconify-icon'
+import './assets/index.css'
 
 const app = createApp(App)
 createGlobalHandleError(app, router)

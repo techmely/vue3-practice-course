@@ -11,7 +11,7 @@ const envSchema = z.object({
 
   VITE_ERROR_TRACKING_PROVIDER: z.enum(['sentry', 'custom', 'none']),
   VITE_CUSTOM_DSN: z.string(),
-  VITE_SENTRY_DSN: z.string(),
+  VITE_SENTRY_DSN: z.string()
 })
 
 const envs = process.env

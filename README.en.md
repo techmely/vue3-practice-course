@@ -59,7 +59,6 @@ Requirements You should be familiar with JavaScript, HTML, basic CSS, and have f
 
 You could check out our Vuejs courses for FREE: https://www.youtube.com/watch?v=Vg9n_YRGPIY&list=PLwJIrGynFq9B_BQJZJi-ikWDDkYKVUpM5
 
-
 ## Project Setup
 
 ```sh
@@ -75,7 +74,6 @@ bun run dev
 ### ENV Variables
 
 Make sure to provide the env variables listed in the `.env.example` file along with their values.
-
 
 ```
 

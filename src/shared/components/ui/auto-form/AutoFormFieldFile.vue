@@ -1,9 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { TrashIcon } from 'lucide-vue-next'
-import AutoFormLabel from './AutoFormLabel.vue'
-import { beautifyObjectName } from './utils'
 import type { FieldProps } from './interface'
+import { Button } from '@/shared/components/ui/button'
 import {
   FormControl,
   FormDescription,
@@ -12,7 +9,10 @@ import {
   FormMessage
 } from '@/shared/components/ui/form'
 import { Input } from '@/shared/components/ui/input'
-import { Button } from '@/shared/components/ui/button'
+import { TrashIcon } from 'lucide-vue-next'
+import { ref } from 'vue'
+import AutoFormLabel from './AutoFormLabel.vue'
+import { beautifyObjectName } from './utils'
 
 defineProps<FieldProps>()
 
@@ -61,8 +61,8 @@ async function parseFileAsString(file: File | undefined): Promise<string> {
           >
             <p>{{ inputFile?.name }}</p>
             <Button
-              :size="'icon'"
-              :variant="'ghost'"
+              size="icon"
+              variant="ghost"
               class="h-[26px] w-[26px]"
               aria-label="Remove file"
               type="button"

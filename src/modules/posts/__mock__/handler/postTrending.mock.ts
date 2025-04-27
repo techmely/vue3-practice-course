@@ -1,6 +1,6 @@
+import type { PostTrending } from '../../post.types'
 import { appEnv } from '@/shared/helpers/environment'
 import { http, HttpResponse } from 'msw'
-import type { PostTrending } from '../../post.types'
 
 const trendingPosts: PostTrending[] = [
   {

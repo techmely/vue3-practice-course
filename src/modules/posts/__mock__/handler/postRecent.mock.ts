@@ -1,6 +1,6 @@
+import type { PostRecent } from '../../post.types'
 import { appEnv } from '@/shared/helpers/environment'
 import { http, HttpResponse } from 'msw'
-import type { PostRecent } from '../../post.types'
 
 const posts: PostRecent[] = [
   {

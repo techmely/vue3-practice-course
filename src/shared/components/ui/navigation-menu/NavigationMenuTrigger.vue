@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from 'vue'
-import { NavigationMenuTrigger, type NavigationMenuTriggerProps, useForwardProps } from 'radix-vue'
-import { ChevronDown } from 'lucide-vue-next'
-import { navigationMenuTriggerStyle } from '.'
+import type { NavigationMenuTriggerProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
 import { cn } from '@/shared/helpers/className'
+import { ChevronDown } from 'lucide-vue-next'
+import { NavigationMenuTrigger, useForwardProps } from 'radix-vue'
+import { computed } from 'vue'
+import { navigationMenuTriggerStyle } from '.'
 
 const props = defineProps<NavigationMenuTriggerProps & { class?: HTMLAttributes['class'] }>()
 

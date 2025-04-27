@@ -1,5 +1,5 @@
-import { appEnv } from '@/shared/helpers/environment'
 import type { App } from 'vue'
+import { appEnv } from '@/shared/helpers/environment'
 
 export async function startMockWorker(app: App) {
   if (appEnv.isDev && appEnv.isMock) {

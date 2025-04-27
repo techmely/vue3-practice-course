@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from 'vue'
 import type { ComboboxEmptyProps } from 'radix-vue'
-import { ComboboxEmpty } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
 import { cn } from '@/shared/helpers/className'
+import { ComboboxEmpty } from 'radix-vue'
+import { computed } from 'vue'
 
 const props = defineProps<ComboboxEmptyProps & { class?: HTMLAttributes['class'] }>()
 

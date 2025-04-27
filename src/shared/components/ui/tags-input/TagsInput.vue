@@ -1,12 +1,9 @@
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from 'vue'
-import {
-  TagsInputRoot,
-  type TagsInputRootEmits,
-  type TagsInputRootProps,
-  useForwardPropsEmits
-} from 'radix-vue'
+import type { TagsInputRootEmits, TagsInputRootProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
 import { cn } from '@/shared/helpers/className'
+import { TagsInputRoot, useForwardPropsEmits } from 'radix-vue'
+import { computed } from 'vue'
 
 const props = defineProps<TagsInputRootProps & { class?: HTMLAttributes['class'] }>()
 const emits = defineEmits<TagsInputRootEmits>()

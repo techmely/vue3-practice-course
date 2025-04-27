@@ -1,13 +1,9 @@
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from 'vue'
-import {
-  TooltipContent,
-  type TooltipContentEmits,
-  type TooltipContentProps,
-  TooltipPortal,
-  useForwardPropsEmits
-} from 'radix-vue'
+import type { TooltipContentEmits, TooltipContentProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
 import { cn } from '@/shared/helpers/className'
+import { TooltipContent, TooltipPortal, useForwardPropsEmits } from 'radix-vue'
+import { computed } from 'vue'
 
 defineOptions({
   inheritAttrs: false

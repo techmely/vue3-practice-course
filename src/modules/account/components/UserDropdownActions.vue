@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { useSignOut } from '../composables/useSignOut'
+
 const signout = useSignOut()
 const router = useRouter()
 
-const handleSignOut = async () => {
+async function handleSignOut() {
   await signout.mutateAsync()
   router.replace('/')
 }
@@ -18,7 +19,7 @@ const handleSignOut = async () => {
       </Avatar>
     </DropdownMenuTrigger>
     <DropdownMenuContent>
-      <DropdownMenuItem @click="router.push('/me')" class="cursor-pointer">
+      <DropdownMenuItem class="cursor-pointer" @click="router.push('/me')">
         <iconify-icon icon="material-symbols:account-circle-full" class="size-4" /> My Profile
       </DropdownMenuItem>
       <DropdownMenuItem>

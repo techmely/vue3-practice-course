@@ -1,11 +1,9 @@
 <script lang="ts" setup>
-import { type HTMLAttributes, computed } from 'vue'
-import {
-  CalendarRoot,
-  type CalendarRootEmits,
-  type CalendarRootProps,
-  useForwardPropsEmits
-} from 'radix-vue'
+import type { CalendarRootEmits, CalendarRootProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
+import { cn } from '@/shared/helpers/className'
+import { CalendarRoot, useForwardPropsEmits } from 'radix-vue'
+import { computed } from 'vue'
 import {
   CalendarCell,
   CalendarCellTrigger,
@@ -19,7 +17,6 @@ import {
   CalendarNextButton,
   CalendarPrevButton
 } from '.'
-import { cn } from '@/shared/helpers/className'
 
 const props = defineProps<CalendarRootProps & { class?: HTMLAttributes['class'] }>()
 

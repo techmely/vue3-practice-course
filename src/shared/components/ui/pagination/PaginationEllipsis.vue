@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from 'vue'
-import { PaginationEllipsis, type PaginationEllipsisProps } from 'radix-vue'
-import { MoreHorizontal } from 'lucide-vue-next'
+import type { PaginationEllipsisProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
 import { cn } from '@/shared/helpers/className'
+import { MoreHorizontal } from 'lucide-vue-next'
+import { PaginationEllipsis } from 'radix-vue'
+import { computed } from 'vue'
 
 const props = defineProps<PaginationEllipsisProps & { class?: HTMLAttributes['class'] }>()
 

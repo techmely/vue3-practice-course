@@ -1,17 +1,18 @@
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from 'vue'
+import type { DialogContentEmits, DialogContentProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
+import type { SheetVariants } from '.'
+import { cn } from '@/shared/helpers/className'
+import { X } from 'lucide-vue-next'
 import {
   DialogClose,
   DialogContent,
-  type DialogContentEmits,
-  type DialogContentProps,
   DialogOverlay,
   DialogPortal,
   useForwardPropsEmits
 } from 'radix-vue'
-import { X } from 'lucide-vue-next'
-import { type SheetVariants, sheetVariants } from '.'
-import { cn } from '@/shared/helpers/className'
+import { computed } from 'vue'
+import { sheetVariants } from '.'
 
 interface SheetContentProps extends DialogContentProps {
   class?: HTMLAttributes['class']

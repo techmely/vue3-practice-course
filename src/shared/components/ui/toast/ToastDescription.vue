@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from 'vue'
-import { ToastDescription, type ToastDescriptionProps } from 'radix-vue'
+import type { ToastDescriptionProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
 import { cn } from '@/shared/helpers/className'
+import { ToastDescription } from 'radix-vue'
+import { computed } from 'vue'
 
 const props = defineProps<ToastDescriptionProps & { class?: HTMLAttributes['class'] }>()
 

@@ -1,7 +1,7 @@
-import { appEnv } from '@/shared/helpers/environment'
-import { http, HttpResponse } from 'msw'
 import type { PostTop } from '../../post.types'
+import { appEnv } from '@/shared/helpers/environment'
 import { faker } from '@faker-js/faker'
+import { http, HttpResponse } from 'msw'
 
 const topPosts: PostTop[] = [
   {

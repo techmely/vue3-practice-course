@@ -1,18 +1,17 @@
 /// <reference types="vitest" />
 
+import type { UserConfig } from 'vite'
+import { fileURLToPath } from 'node:url'
+import viteTailwindcss from '@tailwindcss/vite'
 import viteVue from '@vitejs/plugin-vue'
 import viteCssAutoPrefixer from 'autoprefixer'
-import { visualizer as viteVisualizer } from 'rollup-plugin-visualizer'
-import viteCssTailwind from 'tailwindcss'
 import viteAutoImport from 'unplugin-auto-import/vite'
 import viteComponents from 'unplugin-vue-components/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import viteVueRouter from 'unplugin-vue-router/vite'
-import { fileURLToPath } from 'node:url'
-import { defineConfig, loadEnv, type UserConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import viteCompress from 'vite-plugin-compression2'
 import vueDevTools from 'vite-plugin-vue-devtools'
-
 
 export default defineConfig(({ mode }) => {
   const env = loadViteEnv(mode)
@@ -21,33 +20,34 @@ export default defineConfig(({ mode }) => {
   const plugins = [
     viteVueRouter(),
     viteComponents({
-      dirs: ['src/shared/components']
+      dirs: ['src/shared/components'],
     }),
     viteAutoImport({
       include: [
         /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
         /\.vue$/,
-        /\.vue\?vue/ // .vue
+        /\.vue\?vue/, // .vue
       ],
       imports: [
         'vue',
         VueRouterAutoImports,
         {
-          pinia: ['defineStore', 'storeToRefs', 'acceptHMRUpdate']
-        }
+          pinia: ['defineStore', 'storeToRefs', 'acceptHMRUpdate'],
+        },
       ],
       dts: true,
       viteOptimizeDeps: true,
-      dirs: ['src/modules/account/store', 'src/modules/global/store', 'src/modules/user/store']
+      dirs: ['src/modules/account/store', 'src/modules/global/store', 'src/modules/user/store'],
     }),
     viteVue({
       template: {
         compilerOptions: {
-          isCustomElement: (element) => element.startsWith('iconify-icon')
-        }
-      }
+          isCustomElement: element => element.startsWith('iconify-icon'),
+        },
+      },
     }),
-    vueDevTools()
+    viteTailwindcss(),
+    vueDevTools(),
   ]
 
   if (isProd) {
@@ -55,41 +55,40 @@ export default defineConfig(({ mode }) => {
       viteCompress({
         algorithm: 'brotliCompress',
         deleteOriginalAssets: false,
-        exclude: [/\.(png|avif|webp|jpe?g|gif)$/i, /\.map$/, /\.br$/]
+        exclude: [/\.(png|avif|webp|jpe?g|gif)$/i, /\.map$/, /\.br$/],
       }),
-      viteVisualizer()
     )
   }
 
   const userConfig: UserConfig = {
     define: {
-      'process.env': JSON.stringify(env)
+      'process.env': JSON.stringify(env),
     },
     plugins,
     css: {
       postcss: {
-        plugins: [viteCssTailwind(), viteCssAutoPrefixer()]
-      }
+        plugins: [viteCssAutoPrefixer()],
+      },
     },
     test: {
       environment: 'jsdom',
       exclude: ['./__test__/benchmark/**/*', 'node_modules'],
       setupFiles: ['./vitest.setup.ts'],
       coverage: {
-        reporter: ['text', 'html', 'json']
-      }
+        reporter: ['text', 'html', 'json'],
+      },
     },
     server: {
-      port: +(process.env.PORT || '') || 3000
+      port: +(process.env.PORT || '') || 3000,
     },
     build: {
-      cssMinify: 'lightningcss'
+      cssMinify: 'lightningcss',
     },
     resolve: {
       alias: {
-        '@': fileURLToPath(new URL('./src', import.meta.url))
-      }
-    }
+        '@': fileURLToPath(new URL('./src', import.meta.url)),
+      },
+    },
   }
 
   return userConfig
@@ -104,7 +103,7 @@ function loadViteEnv(mode: string) {
       }
       return acc
     },
-    {} as Record<string, string>
+    {} as Record<string, string>,
   )
 
   return viteEnvs

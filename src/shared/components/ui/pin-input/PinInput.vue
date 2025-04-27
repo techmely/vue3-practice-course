@@ -1,12 +1,9 @@
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from 'vue'
-import {
-  PinInputRoot,
-  type PinInputRootEmits,
-  type PinInputRootProps,
-  useForwardPropsEmits
-} from 'radix-vue'
+import type { PinInputRootEmits, PinInputRootProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
 import { cn } from '@/shared/helpers/className'
+import { PinInputRoot, useForwardPropsEmits } from 'radix-vue'
+import { computed } from 'vue'
 
 const props = withDefaults(defineProps<PinInputRootProps & { class?: HTMLAttributes['class'] }>(), {
   modelValue: () => []

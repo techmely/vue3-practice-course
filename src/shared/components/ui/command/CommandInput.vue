@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from 'vue'
-import { Search } from 'lucide-vue-next'
-import { ComboboxInput, type ComboboxInputProps, useForwardProps } from 'radix-vue'
+import type { ComboboxInputProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
 import { cn } from '@/shared/helpers/className'
+import { Search } from 'lucide-vue-next'
+import { ComboboxInput, useForwardProps } from 'radix-vue'
+import { computed } from 'vue'
 
 defineOptions({
   inheritAttrs: false

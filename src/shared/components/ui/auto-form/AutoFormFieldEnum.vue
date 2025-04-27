@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import AutoFormLabel from './AutoFormLabel.vue'
-import { beautifyObjectName } from './utils'
 import type { FieldProps } from './interface'
 import {
   FormControl,
@@ -9,6 +7,8 @@ import {
   FormItem,
   FormMessage
 } from '@/shared/components/ui/form'
+import { Label } from '@/shared/components/ui/label'
+import { RadioGroup, RadioGroupItem } from '@/shared/components/ui/radio-group'
 import {
   Select,
   SelectContent,
@@ -16,8 +16,8 @@ import {
   SelectTrigger,
   SelectValue
 } from '@/shared/components/ui/select'
-import { Label } from '@/shared/components/ui/label'
-import { RadioGroup, RadioGroupItem } from '@/shared/components/ui/radio-group'
+import AutoFormLabel from './AutoFormLabel.vue'
+import { beautifyObjectName } from './utils'
 
 defineProps<
   FieldProps & {
@@ -37,7 +37,7 @@ defineProps<
           <RadioGroup
             v-if="config?.component === 'radio'"
             :disabled="disabled"
-            :orientation="'vertical'"
+            orientation="vertical"
             v-bind="{ ...slotProps.componentField }"
           >
             <div

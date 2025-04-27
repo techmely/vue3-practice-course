@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from 'vue'
-import { MenubarSubTrigger, type MenubarSubTriggerProps, useForwardProps } from 'radix-vue'
-import { ChevronRight } from 'lucide-vue-next'
+import type { MenubarSubTriggerProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
 import { cn } from '@/shared/helpers/className'
+import { ChevronRight } from 'lucide-vue-next'
+import { MenubarSubTrigger, useForwardProps } from 'radix-vue'
+import { computed } from 'vue'
 
 const props = defineProps<
   MenubarSubTriggerProps & { class?: HTMLAttributes['class']; inset?: boolean }

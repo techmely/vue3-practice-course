@@ -1,10 +1,9 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest'
-import { useSignUp } from './useSignUp'
-import { signUpEmailPassword } from '../services/firebase.service'
-import { createPinia } from 'pinia'
-import { setActivePinia } from 'pinia'
 import { VueQueryPlugin } from '@tanstack/vue-query'
 import { flushPromises, mount } from '@vue/test-utils'
+import { createPinia, setActivePinia } from 'pinia'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
+import { signUpEmailPassword } from '../services/firebase.service'
+import { useSignUp } from './useSignUp'
 
 vi.mock('../services/firebase.service', () => ({
   signUpEmailPassword: vi.fn()

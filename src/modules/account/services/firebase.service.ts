@@ -1,12 +1,8 @@
-import { firebaseApp } from '@/libs/firebase'
 import type { SignUpRequest } from '@/modules/account/account.types'
 import type { AppUser } from '@/modules/user/user.types'
-import {
-  createUserWithEmailAndPassword,
-  getAuth,
-  signInWithEmailAndPassword,
-  type User
-} from 'firebase/auth'
+import type { User } from 'firebase/auth'
+import { firebaseApp } from '@/libs/firebase'
+import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 
 export const appFirebaseAuth = getAuth(firebaseApp)
 

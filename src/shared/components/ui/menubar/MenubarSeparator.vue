@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from 'vue'
-import { MenubarSeparator, type MenubarSeparatorProps, useForwardProps } from 'radix-vue'
+import type { MenubarSeparatorProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
 import { cn } from '@/shared/helpers/className'
+import { MenubarSeparator, useForwardProps } from 'radix-vue'
+import { computed } from 'vue'
 
 const props = defineProps<MenubarSeparatorProps & { class?: HTMLAttributes['class'] }>()
 

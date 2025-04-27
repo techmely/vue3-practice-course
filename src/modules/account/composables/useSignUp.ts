@@ -1,5 +1,5 @@
-import { useMutation } from '@tanstack/vue-query'
 import type { SignUpRequest } from '../account.types'
+import { useMutation } from '@tanstack/vue-query'
 import { signUpEmailPassword } from '../services/firebase.service'
 
 export function useSignUp() {

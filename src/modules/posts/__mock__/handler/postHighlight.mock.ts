@@ -1,7 +1,7 @@
-import { appEnv } from '@/shared/helpers/environment'
-import { http, HttpResponse } from 'msw'
 import type { PostHighlight } from '../../post.types'
+import { appEnv } from '@/shared/helpers/environment'
 import { faker } from '@faker-js/faker'
+import { http, HttpResponse } from 'msw'
 
 export const postHighlightHandler = [
   http.get(`${appEnv.VITE_BASE_API_URL}/api/v1/posts/highlight`, () => {

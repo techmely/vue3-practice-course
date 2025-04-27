@@ -1,6 +1,6 @@
 import { appEnv } from '@/shared/helpers/environment'
-import appConfig from '../../../app.config'
 import ky from 'ky'
+import appConfig from '../../../app.config'
 
 const headers = {
   'Content-Type': 'application/json',

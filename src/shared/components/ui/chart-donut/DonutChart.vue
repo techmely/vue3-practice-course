@@ -1,11 +1,12 @@
 <script setup lang="ts" generic="T extends Record<string, any>">
-import { VisDonut, VisSingleContainer } from '@unovis/vue'
-import { Donut } from '@unovis/ts'
-import { type Component, computed, ref } from 'vue'
-import { useMounted } from '@vueuse/core'
+import type { Component } from 'vue'
 import type { BaseChartProps } from '.'
 import { ChartSingleTooltip, defaultColors } from '@/shared/components/ui/chart'
 import { cn } from '@/shared/helpers/className'
+import { Donut } from '@unovis/ts'
+import { VisDonut, VisSingleContainer } from '@unovis/vue'
+import { useMounted } from '@vueuse/core'
+import { computed, ref } from 'vue'
 
 const props = withDefaults(
   defineProps<

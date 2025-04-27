@@ -1,13 +1,9 @@
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from 'vue'
-import {
-  PopoverContent,
-  type PopoverContentEmits,
-  type PopoverContentProps,
-  PopoverPortal,
-  useForwardPropsEmits
-} from 'radix-vue'
+import type { PopoverContentEmits, PopoverContentProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
 import { cn } from '@/shared/helpers/className'
+import { PopoverContent, PopoverPortal, useForwardPropsEmits } from 'radix-vue'
+import { computed } from 'vue'
 
 defineOptions({
   inheritAttrs: false

@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import AutoFormLabel from './AutoFormLabel.vue'
-import { beautifyObjectName } from './utils'
 import type { FieldProps } from './interface'
 import {
   FormControl,
@@ -12,6 +9,9 @@ import {
 } from '@/shared/components/ui/form'
 import { Input } from '@/shared/components/ui/input'
 import { Textarea } from '@/shared/components/ui/textarea'
+import { computed } from 'vue'
+import AutoFormLabel from './AutoFormLabel.vue'
+import { beautifyObjectName } from './utils'
 
 const props = defineProps<FieldProps>()
 const inputComponent = computed(() => (props.config?.component === 'textarea' ? Textarea : Input))

@@ -1,13 +1,13 @@
 export interface ErrorTrackingConfig {
-  provider: 'sentry' | 'custom' | 'none';
-  sentryOptions?: ErrorSentryOptions;
-  customOptions?: ErrorCustomOptions;
+  provider: 'sentry' | 'custom' | 'none'
+  sentryOptions?: ErrorSentryOptions
+  customOptions?: ErrorCustomOptions
 }
 
 export interface ErrorSentryOptions {
-  dsn: string;
+  dsn: string
 }
 
 export interface ErrorCustomOptions {
-  dsn: string;
+  dsn: string
 }

@@ -3,8 +3,8 @@ import { cn } from '@/shared/helpers/className'
 import { toTypedSchema } from '@vee-validate/zod'
 import { useForm } from 'vee-validate'
 import * as z from 'zod'
-import { useSignUp } from '../composables/useSignUp'
 import { useSignIn } from '../composables/useSignIn'
+import { useSignUp } from '../composables/useSignUp'
 
 const props = withDefaults(
   defineProps<{
@@ -65,7 +65,7 @@ async function onSubmit(value: any) {
       @submit="onSubmit"
     >
       <Button :disabled="isLoading" type="submit" class="w-full">
-        <iconify-icon icon="svg-spinners:blocks-wave" v-if="isLoading" class="mr-2 h-4 w-4" />
+        <iconify-icon v-if="isLoading" icon="svg-spinners:blocks-wave" class="mr-2 h-4 w-4" />
         {{ isSignIn ? 'Sign In' : 'Sign Up' }} with Email
       </Button>
     </AutoForm>

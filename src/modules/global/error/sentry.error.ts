@@ -1,16 +1,12 @@
-import * as Sentry from "@sentry/vue";
-import type { App } from "vue";
-import type { Router } from "vue-router";
-import type { ErrorSentryOptions } from "./error.types";
+import type { App } from 'vue'
+import type { Router } from 'vue-router'
+import type { ErrorSentryOptions } from './error.types'
+import * as Sentry from '@sentry/vue'
 
-
-export const defineSentryErrorHandler = (app: App, router: Router, config: ErrorSentryOptions) => {
+export function defineSentryErrorHandler(app: App, router: Router, config: ErrorSentryOptions) {
   Sentry.init({
     app,
-    integrations: [
-      Sentry.browserTracingIntegration({ router }),
-      Sentry.replayIntegration(),
-    ],
+    integrations: [Sentry.browserTracingIntegration({ router }), Sentry.replayIntegration()],
     // Set tracesSampleRate to 1.0 to capture 100%
     // of transactions for tracing.
     // We recommend adjusting this value in production
@@ -19,7 +15,7 @@ export const defineSentryErrorHandler = (app: App, router: Router, config: Error
     tracesSampleRate: 1.0,
 
     // Set `tracePropagationTargets` to control for which URLs trace propagation should be enabled
-    tracePropagationTargets: ["localhost", /^https:\/\/yourserver\.io\/api/],
+    tracePropagationTargets: ['localhost', /^https:\/\/yourserver\.io\/api/],
 
     // Capture Replay for 10% of all sessions,
     // plus for 100% of sessions with an error

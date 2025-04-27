@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { beautifyObjectName } from './utils'
 import type { FieldProps } from './interface'
-import AutoFormLabel from './AutoFormLabel.vue'
+import { Checkbox } from '@/shared/components/ui/checkbox'
 import {
   FormControl,
   FormDescription,
@@ -11,7 +9,9 @@ import {
   FormMessage
 } from '@/shared/components/ui/form'
 import { Switch } from '@/shared/components/ui/switch'
-import { Checkbox } from '@/shared/components/ui/checkbox'
+import { computed } from 'vue'
+import AutoFormLabel from './AutoFormLabel.vue'
+import { beautifyObjectName } from './utils'
 
 const props = defineProps<FieldProps>()
 

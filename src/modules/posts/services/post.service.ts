@@ -1,6 +1,6 @@
-import { sleep } from '@techmely/es-toolkit'
-import httpClient from '@/libs/httpClient'
 import type { PostHighlight, PostRecent, PostTop, PostTrending } from '../post.types'
+import httpClient from '@/libs/httpClient'
+import { sleep } from '@techmely/es-toolkit'
 
 export async function getPostHighlight() {
   const response = await httpClient.get('api/v1/posts/highlight')

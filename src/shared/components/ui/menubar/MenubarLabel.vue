@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import type { MenubarLabelProps } from 'radix-vue'
 import type { HTMLAttributes } from 'vue'
-import { MenubarLabel, type MenubarLabelProps } from 'radix-vue'
 import { cn } from '@/shared/helpers/className'
+import { MenubarLabel } from 'radix-vue'
 
 const props = defineProps<
   MenubarLabelProps & { class?: HTMLAttributes['class']; inset?: boolean }

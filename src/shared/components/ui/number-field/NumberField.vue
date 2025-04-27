@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import type { NumberFieldRootEmits, NumberFieldRootProps } from 'radix-vue'
-import { NumberFieldRoot, useForwardPropsEmits } from 'radix-vue'
-import { type HTMLAttributes, computed } from 'vue'
+import type { HTMLAttributes } from 'vue'
 import { cn } from '@/shared/helpers/className'
+import { NumberFieldRoot, useForwardPropsEmits } from 'radix-vue'
+import { computed } from 'vue'
 
 const props = defineProps<NumberFieldRootProps & { class?: HTMLAttributes['class'] }>()
 const emits = defineEmits<NumberFieldRootEmits>()

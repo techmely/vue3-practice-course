@@ -7,7 +7,7 @@ const { user } = storeToRefs(useUserStore())
 </script>
 
 <template>
-  <header class="flex justify-between w-full py-4">
+  <header class="flex justify-between w-full py-4 px-32">
     <div class="flex items-center">
       <a href="/">
         <Avatar>
@@ -27,7 +27,7 @@ const { user } = storeToRefs(useUserStore())
           </NavigationMenuItem>
           <NavigationMenuItem>
             <NavigationMenuLink href="/partnerships" :class="navigationMenuTriggerStyle()">
-              Parnership
+              Partnership
             </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>

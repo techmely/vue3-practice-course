@@ -1,12 +1,12 @@
 <script setup lang="ts">
+import type { Calendar } from 'v-calendar'
+import { buttonVariants } from '@/shared/components/ui/button'
+import { cn } from '@/shared/helpers/className'
 import { useVModel } from '@vueuse/core'
 import { ChevronLeft, ChevronRight } from 'lucide-vue-next'
-import type { Calendar } from 'v-calendar'
 import { DatePicker } from 'v-calendar'
 import { computed, nextTick, onMounted, ref, useSlots } from 'vue'
 import { isVCalendarSlot } from '.'
-import { cn } from '@/shared/helpers/className'
-import { buttonVariants } from '@/shared/components/ui/button'
 
 /* Extracted from v-calendar */
 type DatePickerModel = DatePickerDate | DatePickerRangeObject
@@ -114,7 +114,7 @@ const vCalendarSlots = computed(() => {
       :model-modifiers="modelModifiers"
       class="calendar"
       trim-weeks
-      :transition="'none'"
+      transition="none"
       :columns="columns"
     >
       <template v-for="(_, slot) of vCalendarSlots" #[slot]="scope">

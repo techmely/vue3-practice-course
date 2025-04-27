@@ -1,12 +1,10 @@
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from 'vue'
-import {
-  SelectScrollDownButton,
-  type SelectScrollDownButtonProps,
-  useForwardProps
-} from 'radix-vue'
-import { ChevronDown } from 'lucide-vue-next'
+import type { SelectScrollDownButtonProps } from 'radix-vue'
+import type { HTMLAttributes } from 'vue'
 import { cn } from '@/shared/helpers/className'
+import { ChevronDown } from 'lucide-vue-next'
+import { SelectScrollDownButton, useForwardProps } from 'radix-vue'
+import { computed } from 'vue'
 
 const props = defineProps<SelectScrollDownButtonProps & { class?: HTMLAttributes['class'] }>()
 
