@@ -8,6 +8,7 @@ const { data: postHighlight, isLoading: isLoadingPostHighlight } = usePostHighli
 const { data: postRecent, isLoading: isLoadingPostRecent } = usePostRecent()
 const { data: postTop, isLoading: isLoadingPostTop } = usePostTop()
 const { data: postTrending, isLoading: isLoadingPostTrending } = usePostTrending()
+
 </script>
 
 <template>
@@ -18,7 +19,10 @@ const { data: postTrending, isLoading: isLoadingPostTrending } = usePostTrending
           <Skeleton class="w-full h-[400px]" />
         </div>
         <section v-else id="post-highlight">
-          <Card>
+          <Card data-tracking-event="post_highlight_clicked" 
+            :data-tracking-params="JSON.stringify({
+            post_id: postHighlight?.bestHighlight?.id,
+          })" >
             <CardContent class="p-0">
               <img
                 :src="postHighlight?.bestHighlight?.image"

@@ -11,8 +11,13 @@ import router from './router'
 import { appEnv } from './shared/helpers/environment'
 import 'iconify-icon'
 import './assets/index.css'
+import { posthogPlugin } from './libs/analytics'
+import { initGlobalFunction } from './modules/global/global.function'
 
 const app = createApp(App)
+app.use(posthogPlugin)
+
+
 createGlobalHandleError(app, router)
 
 app.use(VueQueryPlugin, {
@@ -23,6 +28,7 @@ app.use(router)
 
 /** Init firebase observe auth state change */
 useObserveAppUser()
+initGlobalFunction()
 
 startMockWorker(app)
 
