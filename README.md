@@ -13,7 +13,7 @@ Cảm ơn [hieuhani](https://github.com/hieuhani) vì project [techgoda](https:/
 - Bài 7: [Nâng cấp version dependencies để tránh hacker tấn công]
 - Bài 8: Member Only [Capture analytics events để đo lường tương tác của user]
 - Bài 9: Member Only [Tạo/Viết/Sửa/Xóa bài viết với Tiptap, Mock Service Worker và FakerJs]
-- Bài 10: Member Only [Search + tóm tắt bài viết với Vue Query và OpenAI]
+- Bài 10: Member Only [Search + tóm tắt bài viết với Vue Query]
 - Bài 11: Member Only [Deploy project với Vercel và Cloudflare]
 
 ## **We cover the fundamentals, like:**
