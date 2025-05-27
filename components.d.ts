@@ -259,6 +259,7 @@ declare module 'vue' {
     TagsInputItemDelete: typeof import('./src/shared/components/ui/tags-input/TagsInputItemDelete.vue')['default']
     TagsInputItemText: typeof import('./src/shared/components/ui/tags-input/TagsInputItemText.vue')['default']
     Textarea: typeof import('./src/shared/components/ui/textarea/Textarea.vue')['default']
+    TiptapEditor: typeof import('./src/shared/components/ui/editor/TiptapEditor.vue')['default']
     Toast: typeof import('./src/shared/components/ui/toast/Toast.vue')['default']
     ToastAction: typeof import('./src/shared/components/ui/toast/ToastAction.vue')['default']
     ToastClose: typeof import('./src/shared/components/ui/toast/ToastClose.vue')['default']

@@ -12,7 +12,7 @@ const { data: postTrending, isLoading: isLoadingPostTrending } = usePostTrending
 </script>
 
 <template>
-  <main class="container mx-auto px-4 py-8">
+  <main class="container mx-auto py-8">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <div class="md:col-span-2 space-y-8">
         <div v-if="isLoadingPostHighlight">
