@@ -7,7 +7,7 @@ const { user } = storeToRefs(useUserStore())
 </script>
 
 <template>
-  <header class="flex justify-between w-full py-4 px-32">
+  <header class="flex justify-between w-full py-4 container mx-auto">
     <div class="flex items-center">
       <a href="/">
         <Avatar>
